@@ -4,7 +4,7 @@ import dash_html_components as html
 import pickle
 import plotly.express as px
 from dash.dependencies import Input, Output
-from dash_package import app
+from app import app
 
 file = open('apps/pickles/viz_df.p', 'rb')
 viz_df = pickle.load(file)
