@@ -6,7 +6,7 @@ import plotly.express as px
 from dash.dependencies import Input, Output
 from dash_package import app
 
-file = open('dash_package/pickles/viz_df.p', 'rb')
+file = open('apps/pickles/viz_df.p', 'rb')
 viz_df = pickle.load(file)
 file.close()
 
