@@ -36,7 +36,10 @@ index_page = html.Div([
     html.Div('Wayne Lam', style={'textAlign': 'center'}),
     html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]),
     html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]),
-    dcc.Link('Next Page', href='/page-1', style={'textAlign': 'center', 'color': 'black'}),
+    html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]),
+    dcc.Link('PCA Scatter Plot', href='/page-1', style={'textAlign': 'center', 'color': 'black'}),
+    html.Br([]),
+    dcc.Link('Feature Scatter Plot', href='/page-2', style={'textAlign': 'center', 'color': 'black'}),
     # dcc.Link('Go to Page 2', href='/page-2'),
 ])
 
@@ -44,6 +47,7 @@ page_1_layout = html.Div(id='page-1-content', children=[
         html.H1('Reduced Dimensions of News Articles', style={'textAlign': 'center'}),
         html.P('Dimensionality reduction (PCA) of 17 features to 6 dimensions', style={'textAlign': 'center'}),
         html.Br(),
+        dcc.Link('Home', href='/', style={'textAlign': 'center', 'color': 'black'}),
         html.Div(
             [
                 html.P([d + ":", dcc.Dropdown(id=d, options=col_options)])
@@ -55,7 +59,6 @@ page_1_layout = html.Div(id='page-1-content', children=[
                     value='K-Means',
         ))]),
         dcc.Graph(id="graph", style={"width": "80%", "display": "inline-block"}),
-        dcc.Link('Next Page', href='/page-2', style={'textAlign': 'center', 'color': 'black'}),
     ]
 )
 
@@ -63,6 +66,7 @@ page_2_layout = html.Div(id='page-2-content', children=[
         html.H1('Topic/Sentiment of News Articles', style={'textAlign': 'center'}),
         html.P('Dimensions ', style={'textAlign': 'center'}),
         html.Br(),
+        dcc.Link('Home', href='/', style={'textAlign': 'center', 'color': 'black'}),
         html.Div(
             [
                 html.P([d + ":", dcc.Dropdown(id=d, options=sent_options)])
