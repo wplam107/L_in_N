@@ -36,6 +36,8 @@ page_1_layout = html.Div(id='page-1-content', children=[
                     value='K-Means',
         ))]),
         dcc.Graph(id="graph", style={"width": "80%", "display": "inline-block"}),
+        html.Br(),
+        dcc.Graph(id='dist', style={"width": "80%", "display": "inline-block"})
     ]
 )
 
@@ -59,5 +61,7 @@ page_2_layout = html.Div(id='page-2-content', children=[
                     value='K-Means',
         ))]),
         dcc.Graph(id="graph", style={"width": "80%", "display": "inline-block"}),
+        html.Br(),
+        dcc.Graph(id='dist', style={"width": "80%", "display": "inline-block"})
     ]
 )

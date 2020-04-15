@@ -4,6 +4,7 @@ from dash.dependencies import Input, Output
 
 from app import app
 from data.data import *
+from functions import h_bar
 
 @app.callback(Output("graph", "figure"), [Input(d, "value") for d in dimensions] + [Input('color', 'value')])
 def make_figure(x, y, z, color):
@@ -18,3 +19,7 @@ def make_figure(x, y, z, color):
         hover_name='headline',
         hover_data=text_data,
     )
+
+@app.callback(Output("dist", "figure"), [Input('color', 'value')])
+def make_dist(color):
+    return h_bar(color)

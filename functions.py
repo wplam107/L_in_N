@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import plotly.graph_objects as go
+from data.data import *
 
 
 # Function to group sources by model cluster
@@ -29,7 +30,7 @@ def h_bar(mod):
             fig.add_trace(go.Bar(
                 x=[xd[i]], y=[yd],
                 orientation='h',
-                hovertemplate='Source: %{yd}, '
+                hovertext=None,
                 marker=dict(
                     color=colors[i],
                     line=dict(color='rgb(248, 248, 249)', width=1)
@@ -51,8 +52,8 @@ def h_bar(mod):
             zeroline=False,
         ),
         barmode='stack',
-        paper_bgcolor='rgb(248, 248, 255)',
-        plot_bgcolor='rgb(248, 248, 255)',
+        paper_bgcolor='rgb(255, 255, 255)',
+        plot_bgcolor='rgb(255, 255, 255)',
         margin=dict(l=10, r=40, t=140, b=80),
         showlegend=False,
     )
@@ -113,4 +114,5 @@ def h_bar(mod):
                    family='Arial',
                    size=18,
                    color='#7f7f7f'))
-    fig.show()
+    # fig.show()
+    return fig
