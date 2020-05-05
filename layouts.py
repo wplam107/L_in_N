@@ -11,9 +11,11 @@ index_page = html.Div([
     html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]),
     html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]), html.Br([]),
     html.Br([]), html.Br([]), html.Br([]),
-    dcc.Link('PCA Scatter Plot', href='/page-1', style={'textAlign': 'center', 'color': 'black'}),
+    dcc.Link('PCA Scatter Plot', href='/page-1', style={'color': 'black'}),
     html.Br([]),
-    dcc.Link('Feature Scatter Plot', href='/page-2', style={'textAlign': 'center', 'color': 'black'}),
+    dcc.Link('Feature Scatter Plot', href='/page-2', style={'color': 'black'}),
+    html.Br([]),
+    html.A('GitHub Page', href='https://github.com/wplam107/L_in_N', style={'color': 'black'})
 ])
 
 page_1_layout = html.Div(id='page-1-content', children=[
